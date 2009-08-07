@@ -1,7 +1,8 @@
 [user]
-  name = Brian Doll
-  email = brian@emphaticsolutions.com
+  name = Tanner Donovan
+  email = ttdonovan@gmail.com
 [alias]
+  b = branch
   co = checkout
   s = status
 [color]
@@ -13,5 +14,5 @@
 [apply]
   whitespace = nowarn
 [github]
-	user = briandoll
+	user = ttdonovan
 	token = nah
