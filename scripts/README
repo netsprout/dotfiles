@@ -1,0 +1,4 @@
+Setup Stakeout Command
+1. cp to the ./scripts of a Rails project and remove the .rb
+2. chmod +x ./scripts/rstakeout
+3 example run - ./script/rstakeout "./script/cucumber" "app/**/*.rb" "features/**/*"
