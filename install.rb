@@ -12,7 +12,8 @@ Dir.chdir File.dirname(__FILE__) do
 
     target = File.join(home, ".#{file}")
     unless File.exist? target
-      system %[ln -vsf #{File.join(dotfiles_dir, file)} #{target}]
+      # system %[ln -vsf #{File.join(dotfiles_dir, file)} #{target}]
+      system %[cp -r ~/#{File.join(dotfiles_dir, file)} #{target}]
     end
   end
 end
