@@ -13,6 +13,8 @@
   excludesfile = ~/.gitignore
 [apply]
   whitespace = nowarn
+[branch]
+	autosetuprebase = always
 [github]
 	user = ttdonovan
 	token = nah
