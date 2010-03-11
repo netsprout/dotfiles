@@ -1,6 +1,6 @@
 [user]
-  name = Tanner Donovan
-  email = ttdonovan@gmail.com
+  name = Your Name
+  email = Your Email
 [alias]
   b = branch
   co = checkout
@@ -14,7 +14,7 @@
 [apply]
   whitespace = nowarn
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [github]
-	user = ttdonovan
-	token = nah
+  user = github_username
+  token = github_token
