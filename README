@@ -1,5 +1,12 @@
 Stolen, resurrected, patched, punched and stretched dotfiles.
 
 1. Download
-2. ruby install.rb
+2. ruby install.rb (see TODO)
 3. Dance!
+
+TODO
+  - change from cp to ln 
+  - example
+    ln -nfs ~/bin/dotfiles/vim/vimrc ~/.vimrc
+    ln -nfs ~/bin/dotfiels/vim/gvimrc ~/.gvimrc
+    ln -nfs ~/bin/dotfiles/vim ~/.vim
