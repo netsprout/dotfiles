@@ -1,0 +1,3 @@
+Plugins installed via pathogen
+Place new plugins in vim/bundle
+Generate doc with :call pathogen#helptags()
