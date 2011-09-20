@@ -2,9 +2,18 @@
 --sort-files
 
 # add haml and rake extensions to ack's notion of Ruby files
---type-add=ruby=haml,rake
-
+--type-add=ruby=haml,rake,rb
+--type-add=objc=.pch
+--type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
+--type-set=ragel=.rl
+--type-set=nib=.xib
+--type-set=plist=.plist
+--type-set=tmstuff=.tmproj,.tm_build_errors
+--type-set=javascript=.coffee,.js
 # ignore vendor dirs, I rarely want to search in there.  can be overridden by
 # --noignore-dir=vendor
 --ignore-dir=vendor
 
+--nonib
+--notmstuff
+--noxcode
