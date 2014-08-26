@@ -1,20 +1,34 @@
 [user]
-  name = Your Name
-  email = Your Email
+        name = Aaron Fry
+        email = afry@netsprout.com
 [alias]
-  b = branch
-  co = checkout
-  s = status
+        alias = !git config --get-regexp 'alias.*'
+        aliases = "!echo --- use \\'git alias\\' --- ; git alias"
+        st = "!echo \"# Working as `git config user.name` <`git config user.email`>\"; echo \"#\"; git status"
+        ci = !git commit
+        co = !git checkout
+        fuckit = !git reset --hard
+        production-tag = !git tag -l 'production-*' | sort -n -k2 -t- | tail -1
+        staging-tag = !git tag -l 'staging-*' | sort -n -k2 -t- | tail -1
+        tree = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset'
+        updater = submodule update --init --recursive
+        ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+        lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat
+        oy = !git st
+        name = config user.name
+        b = branch
+        co = checkout
+        s = status
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+        diff = auto
+        status = auto
+        branch = auto
 [core]
-  excludesfile = ~/.gitignore
+        excludesfile = ~/.gitignore
 [apply]
-  whitespace = nowarn
+        whitespace = nowarn
 [branch]
-  autosetuprebase = always
+        autosetuprebase = always
 [github]
-  user = github_username
-  token = github_token
+        user = github_username
+        token = github_token
