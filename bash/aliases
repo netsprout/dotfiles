@@ -1,2 +1,21 @@
 alias vi=vim
 alias c="git log --graph --pretty=format:'%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+# cleanup/remove old merged branches (note: if you rebase/squash, then the local merged flag won't work
+alias gitcleanup='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+alias gitcleanupremote='git branch -r --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+
+# git aliases
+alias s="git st"
+alias d="git diff"
+alias ds="git diff --staged"
+alias dh="git diff head"
+alias gitpp='git pull && git push'
+
+# rake db commands
+alias rdbm="be rake -t db:migrate db:test:prepare"
+alias rdbi="be rake -t db:everything"
+alias rdbs="be rake -t db:setup"  # db:create, db:migrate, db:seed; no db:drop first, no db:test:prepare after
+
+# just super cool
+alias 'g?'='git log --pretty=oneline -1 | sed "s/ .*//"'   # WOWW!
