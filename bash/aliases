@@ -2,8 +2,8 @@ alias vi=vim
 alias c="git log --graph --pretty=format:'%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # cleanup/remove old merged branches (note: if you rebase/squash, then the local merged flag won't work
-alias gitcleanup='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
-alias gitcleanupremote='git branch -r --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+alias gitcleanup_old='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+alias gitcleanupremote_old='git branch -r --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 
 # git aliases
 alias s="git st"
@@ -21,7 +21,7 @@ alias rdbs="be rake -t db:setup"  # db:create, db:migrate, db:seed; no db:drop f
 alias 'g?'='git log --pretty=oneline -1 | sed "s/ .*//"'   # WOWW!
 
 # remove remote branches merged into my local development
-git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git push origin :{}
+alias gitcleanup='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git push origin :{}'
 
 # rename for deletion local branches merged into my local development
-git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git branch -m {} "DELETEME-{}"
+alias gitcleanupremote='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git branch -m {} "DELETEME-{}"'
