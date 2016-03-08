@@ -21,7 +21,7 @@ alias rdbs="be rake -t db:setup"  # db:create, db:migrate, db:seed; no db:drop f
 alias 'g?'='git log --pretty=oneline -1 | sed "s/ .*//"'   # WOWW!
 
 # remove remote branches merged into my local development
-alias gitcleanup='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git push origin :{}'
+alias gitcleanupremote='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git push origin :{}'
 
 # rename for deletion local branches merged into my local development
-alias gitcleanupremote='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git branch -m {} "DELETEME-{}"'
+alias gitcleanup='git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git branch -m {} "DELETEME-{}"'
