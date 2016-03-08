@@ -24,4 +24,4 @@ alias 'g?'='git log --pretty=oneline -1 | sed "s/ .*//"'   # WOWW!
 git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git push origin :{}
 
 # rename for deletion local branches merged into my local development
-git branch --merged development | grep -v "\*" | grep -v "master*" | xargs -I {} git branch -m {} "DELETEME-{}"
+git branch --merged development | grep -v "\*" | grep -v "master*" | grep -v "developoment" | xargs -I {} git branch -m {} "DELETEME-{}"
